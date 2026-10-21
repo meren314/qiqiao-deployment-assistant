@@ -1,0 +1,189 @@
+/* 七巧部署助手 | Copyright (c) 2026 meren314 | Source Available License: LICENSE.txt */
+
+:root {
+  color-scheme: dark;
+  font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+  font-size: 13px;
+  color: #e7e9ee;
+  background: #08090b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  background: #08090b;
+}
+
+body {
+  width: 420px;
+  margin: 0;
+}
+
+main {
+  padding: 11px;
+}
+
+h1 {
+  margin: 0;
+  color: #f7f8fa;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.app-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.subtitle {
+  color: #8f96a3;
+  font-size: 11px;
+  line-height: 14px;
+}
+
+.panel {
+  margin-bottom: 8px;
+  padding: 9px;
+  border: 1px solid #292c33;
+  border-radius: 7px;
+  background: #121419;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .025) inset;
+}
+
+label,
+.log-title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+button,
+select {
+  width: 100%;
+  min-height: 32px;
+  border: 1px solid #3a3e47;
+  border-radius: 6px;
+  background: #1b1e24;
+  color: #edf0f5;
+  font: inherit;
+}
+
+select {
+  padding: 0 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: #6b8cff;
+  background: #222630;
+}
+
+button:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+button.primary {
+  border-color: #5578ff;
+  background: #3559e8;
+  color: #fff;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #4367f0;
+}
+
+button.danger {
+  border-color: #a84d55;
+  background: #25171a;
+  color: #ffb4b9;
+}
+
+button.publish {
+  border-color: #4c8c69;
+  background: #14251c;
+  color: #9ce0b8;
+}
+
+button.publish:hover:not(:disabled) {
+  border-color: #65b987;
+  background: #193023;
+}
+
+.actions button + button {
+  margin-top: 6px;
+}
+
+.muted,
+.notice {
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.muted {
+  margin-top: 6px;
+  word-break: break-all;
+}
+
+.notice {
+  margin: 7px 0 0;
+  font-size: 11px;
+}
+
+.file-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px 10px;
+  margin-top: 7px;
+  line-height: 1.45;
+}
+
+.file-ok {
+  color: #79d5a6;
+}
+
+.file-error {
+  color: #ff858c;
+}
+
+.log-panel {
+  margin-bottom: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  padding: 6px 2px 0;
+  color: #747b87;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+pre {
+  min-height: 72px;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #07080a;
+  color: #d6dae2;
+  font: 11px/1.4 Consolas, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

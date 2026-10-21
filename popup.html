@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- 七巧部署助手 | Copyright (c) 2026 meren314 | Source Available License: LICENSE.txt -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>七巧部署助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header class="app-header">
+      <img class="app-icon" src="icons/icon48.png" alt="">
+      <div>
+        <h1>七巧部署助手</h1>
+        <div class="subtitle">本地代码部署工具</div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <button id="chooseDirectory" class="primary" type="button">选择部署目录</button>
+      <div id="directoryName" class="muted">尚未选择目录</div>
+    </section>
+
+    <section class="panel">
+      <label for="pageSelect">页面文件夹</label>
+      <select id="pageSelect" disabled>
+        <option value="">请先选择目录</option>
+      </select>
+      <div id="fileStatus" class="file-status"></div>
+    </section>
+
+    <section class="panel actions">
+      <button id="writeCurrent" type="button" disabled>写入并保存当前平台文件</button>
+      <button id="writeAll" class="danger" type="button" disabled>写入并保存四个文件</button>
+      <button id="writeAllAndPublish" class="publish" type="button" disabled>写入、保存四个文件并发布</button>
+      <p class="notice">每个文件写入并回读一致后会触发保存；全部确认保存成功后，绿色按钮才会点击发布。</p>
+    </section>
+
+    <section class="panel log-panel">
+      <div class="log-title">执行结果</div>
+      <pre id="log">等待操作</pre>
+    </section>
+
+    <footer>
+      <span id="versionLabel">v1.0.1</span>
+      <span>© 2026 meren314</span>
+      <span>第三方工具，非官方产品</span>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
